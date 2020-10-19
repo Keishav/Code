@@ -1,0 +1,36 @@
+package myCodes;
+import java.util.*;
+public class Employee {
+	String name[]=new String[3];
+	String address[]=new String[3];
+	int year[]=new int[3];
+	public static void main(String [] args) {
+		Employee ob=new Employee();
+		ob.getData();
+		ob.printData();
+	}
+	public void getData() {
+		Scanner sc = new Scanner(System.in);
+		int i;
+		System.out.println("Enter the names of employee");
+		for(i=0;i<3;i++) {
+			name[i]=sc.nextLine();
+		}
+		System.out.println("enter address of all employees");
+		for(i=0;i<3;i++) {
+			address[i]=sc.nextLine();
+		}
+		System.out.println("Enter year of joining of each employee");
+		for(i=0;i<3;i++) {
+			year[i]=sc.nextInt();
+		}
+	}
+	public void printData() {
+		int i;
+		System.out.println("name"+"\t"+"year of joining"+"\t"+"Address");
+		for(i=0;i<3;i++) {
+			System.out.print(name[i]+"\t"+year[i]+"\t"+"\t"+address[i]);
+			System.out.println();
+		}
+	}
+}
